@@ -85,12 +85,14 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route element={<Layout theme={theme} toggleTheme={toggleTheme} />}>
-        <Route path="/" element={<HomePage theme={theme} />} />
+        <Route path="*" element={<HomePage theme={theme} />} />
         <Route path="/about" element={<AboutPage theme={theme} />} />
         <Route path="/education" element={<EducationPage theme={theme} />} />
         <Route path="/projects" element={<ProjectsPage theme={theme} />} />
         <Route path="/skills" element={<SkillsPage theme={theme} />} />
         <Route path="/contact" element={<ContactPage theme={theme} />} />
+        <Route path="*" element={<h2>Page Not Found</h2>} />
+
       </Route>
     )
   );

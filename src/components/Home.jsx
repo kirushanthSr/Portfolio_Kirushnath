@@ -137,6 +137,7 @@ const Name = styled(motion.h1)`
     display: inline-block;
     animation: gradientShift 4s ease-in-out infinite;
     position: relative;
+    margin-bottom: 0.6rem;
     
     &::after {
       content: '';

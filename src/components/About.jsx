@@ -136,7 +136,7 @@ const SkillsTitle = styled.h3`
 
 const SkillsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: 1rem;
 `;
 
@@ -247,7 +247,7 @@ const About = ({ theme }) => {
           <InfoCard variants={itemVariants} theme={theme}>
             <InfoTitle><FaMapMarkerAlt /> Location</InfoTitle>
             <InfoText theme={theme}>
-              No.320/29, Passara Road, Badulla, Sri Lanka
+              No.28, circular Road, Mt.lavinia, Colombo.
             </InfoText>
           </InfoCard>
         </InfoContainer>

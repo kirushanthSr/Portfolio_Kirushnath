@@ -264,6 +264,7 @@ const About = ({ theme }) => {
             <SkillsGrid>
               <SkillItem theme={theme}>Java</SkillItem>
               <SkillItem theme={theme}>Python</SkillItem>
+              <SkillItem theme={theme}>PHP</SkillItem>
             
             </SkillsGrid>
             

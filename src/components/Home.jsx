@@ -493,10 +493,7 @@ const Home = ({ theme }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            Passionate Computer Science enthusiast eager to dive into the real world of technology. 
-            Currently honing my skills at Informatics Institute of Technology, affiliated with the 
-            University of Westminster. Seeking an industry placement to apply my technical knowledge 
-            and problem-solving abilities to real-world challenges.
+            I'm a Computer Science undergraduate at the Informatics Institute of Technology, affiliated with the University of Westminster, passionate about web development. I work with HTML, CSS, JavaScript, and React, and have basic experience with PHP, Laravel, SQL, and Java. I'm eager to apply my skills, take on real-world projects, and grow as a developer.
           </Description>
           
           <SocialLinks
@@ -528,7 +525,7 @@ const Home = ({ theme }) => {
           </SocialLinks>
           
           <CTAButton
-            href="/contact"
+            href="/Portfolio_Kirushnath/contact"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.2 }}

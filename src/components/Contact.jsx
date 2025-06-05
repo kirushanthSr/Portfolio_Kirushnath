@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
+import emailjs from 'emailjs-com';
 
 const ContactContainer = styled.section`
   min-height: 100vh;
@@ -241,28 +242,34 @@ const Contact = ({ theme }) => {
     }));
   };
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+  
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  const templateParams = {
+    from_name: formData.name,
+    from_email: formData.email,
+    subject: formData.subject,
+    message: formData.message
+  };
+
+  emailjs.send('service_x9hpijf', 'template_1p7ikuh', templateParams, 'ebNTVmKdK2z9Exj6A')
+    .then(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
-  };
-  
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setIsSubmitted(false), 5000);
+    })
+    .catch((error) => {
+      setIsSubmitting(false);
+      alert('Failed to send message. Please try again later.');
+      console.error('EmailJS error:', error);
+    });
+};
+
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },

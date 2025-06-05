@@ -140,10 +140,10 @@ const Footer = ({ theme }) => {
         
         <FooterLinks>
           <FooterLink href="/" theme={theme}>Home</FooterLink>
-          <FooterLink href="/about" theme={theme}>About</FooterLink>
-          <FooterLink href="/education" theme={theme}>Education</FooterLink>
-          <FooterLink href="/projects" theme={theme}>Projects</FooterLink>
-          <FooterLink href="/contact" theme={theme}>Contact</FooterLink>
+          <FooterLink href="/Portfolio_Kirushnath/about" theme={theme}>About</FooterLink>
+          <FooterLink href="/Portfolio_Kirushnath/education" theme={theme}>Education</FooterLink>
+          <FooterLink href="/Portfolio_Kirushnath/projects" theme={theme}>Projects</FooterLink>
+          <FooterLink href="/Portfolio_Kirushnath/contact" theme={theme}>Contact</FooterLink>
         </FooterLinks>
         
         <Copyright theme={theme}>

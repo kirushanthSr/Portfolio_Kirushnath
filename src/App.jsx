@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements, Outlet } from 'react-router-dom';
 import styled from '@emotion/styled';
 import './App.css';
 
@@ -21,85 +20,41 @@ const AppContainer = styled.div`
 `;
 
 const MainContent = styled.main`
-  padding-top: 60px; // To account for the fixed navbar
-  min-height: calc(100vh - 60px);
+  padding-top: 60px; // To offset fixed navbar
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 `;
 
-// Layout component that includes the navbar and footer
-function Layout({ theme, toggleTheme }) {
+function App() {
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(prefersDark ? 'dark' : 'light');
+
+    document.body.classList.toggle('dark-theme', theme === 'dark');
+    document.body.classList.toggle('light-theme', theme === 'light');
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
+
   return (
     <AppContainer theme={theme}>
       <Navbar toggleTheme={toggleTheme} theme={theme} />
       <MainContent>
-        <Outlet /> {/* This is the key change - use Outlet instead of children */}
+        <section id="home"><Home theme={theme} /></section>
+        <section id="about"><About theme={theme} /></section>
+        <section id="education"><Education theme={theme} /></section>
+        <section id="projects"><Projects theme={theme} /></section>
+        {/* <section id="skills"><Skills theme={theme} /></section> */}
+        <section id="contact"><Contact theme={theme} /></section>
       </MainContent>
       <Footer theme={theme} />
     </AppContainer>
   );
 }
 
-// Page components that wrap each section
-function HomePage({ theme }) {
-  return <Home theme={theme} id="home" />;
-}
-
-function AboutPage({ theme }) {
-  return <About theme={theme} id="about" />;
-}
-
-function EducationPage({ theme }) {
-  return <Education theme={theme} id="education" />;
-}
-
-function ProjectsPage({ theme }) {
-  return <Projects theme={theme} id="projects" />;
-}
-
-function SkillsPage({ theme }) {
-  return <Skills theme={theme} id="skills" />;
-}
-
-function ContactPage({ theme }) {
-  return <Contact theme={theme} id="contact" />;
-}
-
-function App() {
-  const [theme, setTheme] = useState('light');
-  
-  useEffect(() => {
-    // Check user's preferred color scheme
-    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(prefersDarkMode ? 'dark' : 'light');
-    
-    // Apply theme to document body
-    document.body.classList.toggle('dark-theme', theme === 'dark');
-    document.body.classList.toggle('light-theme', theme === 'light');
-  }, [theme]);
-  
-  const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
-  };
-
-  const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route element={<Layout theme={theme} toggleTheme={toggleTheme} />}>
-      <Route path="/" element={<HomePage theme={theme} />} />
-      <Route path="/about" element={<AboutPage theme={theme} />} />
-      <Route path="/education" element={<EducationPage theme={theme} />} />
-      <Route path="/projects" element={<ProjectsPage theme={theme} />} />
-      <Route path="/skills" element={<SkillsPage theme={theme} />} />
-      <Route path="/contact" element={<ContactPage theme={theme} />} />
-      <Route path="*" element={<h2>Page Not Found</h2>} />
-    </Route>
-  ),
-  {
-    basename: "/Portfolio_Kirushnath",
-  }
-);
-
-  return <RouterProvider router={router} />;
-}
-
-export default App
+export default App;

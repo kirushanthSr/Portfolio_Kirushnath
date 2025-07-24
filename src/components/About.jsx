@@ -199,110 +199,123 @@ const About = ({ theme }) => {
           initial="hidden"
           animate="visible"
         >
-          <InfoCard variants={itemVariants} theme={theme}>
-            <InfoTitle><FaUser /> Professional Summary</InfoTitle>
-            <InfoText theme={theme}>
-              Passionate Computer Science enthusiast eager to dive into the real world of technology. 
-              Currently honing my skills at Informatics Institute of Technology, affiliated with the 
-              University of Westminster. Seeking an industry placement to apply my technical knowledge 
-              and problem-solving abilities to real-world challenges.
-            </InfoText>
-          </InfoCard>
-          
-          <InfoCard variants={itemVariants} theme={theme}>
-            <InfoTitle><FaGraduationCap /> Education Background</InfoTitle>
-            <InfoList>
-              <InfoItem>
-                <FaGraduationCap />
-                <div>
-                  <strong>University of Westminster</strong>
-                  <p>Bachelor (Hons) of Computer Science (Jan 2024 – Present)</p>
-                </div>
-              </InfoItem>
-              <InfoItem>
-                <FaGraduationCap />
-                <div>
-                  <strong>Informatics Institute of Technology</strong>
-                  <p>Foundation Certificate in Higher Education (May 2023 – Dec 2023)</p>
-                  <p>Passed with Merit</p>
-                </div>
-              </InfoItem>
-              <InfoItem>
-                <FaGraduationCap />
-                <div>
-                  <strong>BD/ Saraswathi Central College</strong>
-                  <p>Advance level (Physical Science) (2021)</p>
-                </div>
-              </InfoItem>
-              <InfoItem>
-                <FaGraduationCap />
-                <div>
-                  <strong>BD/ Uva Science College</strong>
-                  <p>Ordinary Level (2018)</p>
-                </div>
-              </InfoItem>
-            </InfoList>
-          </InfoCard>
-          
-          <InfoCard variants={itemVariants} theme={theme}>
-            <InfoTitle><FaMapMarkerAlt /> Location</InfoTitle>
-            <InfoText theme={theme}>
-              No.28, circular Road, Mt.lavinia, Colombo.
-            </InfoText>
-          </InfoCard>
-        </InfoContainer>
-        
-        <SkillsContainer
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <SkillsCard variants={itemVariants} theme={theme}>
-            <SkillsTitle><FaLaptopCode /> Technical Skills</SkillsTitle>
-            
-            <h4 style={{ marginBottom: '1rem' }}>Programming Languages</h4>
-            <SkillsGrid>
-              <SkillItem theme={theme}>Java</SkillItem>
-              <SkillItem theme={theme}>Python</SkillItem>
-              <SkillItem theme={theme}>PHP</SkillItem>
-            
-            </SkillsGrid>
-            
-            <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>Web Development</h4>
-            <SkillsGrid>
-              <SkillItem theme={theme}>HTML</SkillItem>
-              <SkillItem theme={theme}>CSS</SkillItem>
-              <SkillItem theme={theme}>JavaScript</SkillItem>
-              <SkillItem theme={theme}>React</SkillItem>
-            </SkillsGrid>
-            
-            <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>Data Management</h4>
-            <SkillsGrid>
-              <SkillItem theme={theme}>JSON</SkillItem>
-              <SkillItem theme={theme}>SQL</SkillItem>
-            </SkillsGrid>
-            
-            <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>Version Control</h4>
-            <SkillsGrid>
-              <SkillItem theme={theme}>Git</SkillItem>
-              <SkillItem theme={theme}>GitHub</SkillItem>
-            </SkillsGrid>
-            
-            <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>Design Tools</h4>
-            <SkillsGrid>
-              <SkillItem theme={theme}>Figma</SkillItem>
-              <SkillItem theme={theme}>GIMP</SkillItem>
-            </SkillsGrid>
-            
-            <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>Soft Skills</h4>
-            <SkillsGrid>
-              <SkillItem theme={theme}>Problem Solving</SkillItem>
-              <SkillItem theme={theme}>Critical Thinking</SkillItem>
-              <SkillItem theme={theme}>Teamwork</SkillItem>
-              <SkillItem theme={theme}>Collaboration</SkillItem>
-            </SkillsGrid>
-          </SkillsCard>
-        </SkillsContainer>
+            <InfoCard variants={itemVariants} theme={theme}>
+              <InfoTitle><FaUser /> Professional Summary</InfoTitle>
+              <InfoText theme={theme}>
+                Motivated and detail-oriented Frontend Developer with a strong foundation in React.js, JavaScript, HTML5, and CSS3.
+                Currently pursuing a BSc (Hons) in Computer Science at Informatics Institute of Technology affiliated with the University of Westminster.
+                Experienced in building responsive web applications, dashboards, and RESTful services using modern web technologies and frameworks.
+                Seeking an opportunity to contribute to impactful projects while expanding technical expertise in a collaborative and innovative environment.
+              </InfoText>
+            </InfoCard>
+
+            {/* Education */}
+            <InfoCard variants={itemVariants} theme={theme}>
+              <InfoTitle><FaGraduationCap /> Education Background</InfoTitle>
+              <InfoList>
+                <InfoItem>
+                  <FaGraduationCap />
+                  <div>
+                    <strong>University of Westminster (IIT)</strong>
+                    <p>BSc (Hons) in Computer Science (Jan 2024 – Present)</p>
+                  </div>
+                </InfoItem>
+                <InfoItem>
+                  <FaGraduationCap />
+                  <div>
+                    <strong>Informatics Institute of Technology</strong>
+                    <p>Foundation Certificate in Higher Education (May 2023 – Dec 2023)</p>
+                    <p>Achieved: Merit Pass</p>
+                  </div>
+                </InfoItem>
+                <InfoItem>
+                  <FaGraduationCap />
+                  <div>
+                    <strong>BD/ Saraswathi Central College</strong>
+                    <p>G.C.E. A/L - Physical Science Stream (2021)</p>
+                  </div>
+                </InfoItem>
+                <InfoItem>
+                  <FaGraduationCap />
+                  <div>
+                    <strong>BD/ Uva Science College</strong>
+                    <p>G.C.E. O/L (2018)</p>
+                  </div>
+                </InfoItem>
+              </InfoList>
+            </InfoCard>
+
+            {/* Location */}
+            <InfoCard variants={itemVariants} theme={theme}>
+              <InfoTitle><FaMapMarkerAlt /> Location</InfoTitle>
+              <InfoText theme={theme}>
+                No. 28, Circular Road, Mount Lavinia, Colombo, Sri Lanka.
+              </InfoText>
+            </InfoCard>
+          </InfoContainer>
+
+          {/* Skills Section */}
+          <SkillsContainer
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <SkillsCard variants={itemVariants} theme={theme}>
+              <SkillsTitle><FaLaptopCode /> Technical Skills</SkillsTitle>
+
+              <h4 style={{ marginBottom: '1rem' }}>Programming Languages</h4>
+              <SkillsGrid>
+                <SkillItem theme={theme}>Java</SkillItem>
+                <SkillItem theme={theme}>Python</SkillItem>
+                <SkillItem theme={theme}>JavaScript</SkillItem>
+                <SkillItem theme={theme}>SQL</SkillItem>
+              </SkillsGrid>
+
+              <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>Web Development</h4>
+              <SkillsGrid>
+                <SkillItem theme={theme}>HTML5</SkillItem>
+                <SkillItem theme={theme}>CSS3</SkillItem>
+                <SkillItem theme={theme}>React.js</SkillItem>
+                <SkillItem theme={theme}>Bootstrap</SkillItem>
+                <SkillItem theme={theme}>Tailwind CSS</SkillItem>
+                <SkillItem theme={theme}>REST APIs</SkillItem>
+              </SkillsGrid>
+
+              <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>Data Management</h4>
+              <SkillsGrid>
+                <SkillItem theme={theme}>MySQL</SkillItem>
+                <SkillItem theme={theme}>JSON</SkillItem>
+              </SkillsGrid>
+
+              <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>Version Control & Tools</h4>
+              <SkillsGrid>
+                <SkillItem theme={theme}>Git</SkillItem>
+                <SkillItem theme={theme}>GitHub</SkillItem>
+                <SkillItem theme={theme}>Postman</SkillItem>
+                <SkillItem theme={theme}>VS Code</SkillItem>
+                <SkillItem theme={theme}>PyCharm</SkillItem>
+                <SkillItem theme={theme}>Jupyter Notebook</SkillItem>
+              </SkillsGrid>
+
+              <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>Design & UI Tools</h4>
+              <SkillsGrid>
+                <SkillItem theme={theme}>Figma</SkillItem>
+                <SkillItem theme={theme}>GIMP</SkillItem>
+              </SkillsGrid>
+
+              <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>Soft Skills</h4>
+              <SkillsGrid>
+                <SkillItem theme={theme}>Problem Solving</SkillItem>
+                <SkillItem theme={theme}>Critical Thinking</SkillItem>
+                <SkillItem theme={theme}>Teamwork</SkillItem>
+                <SkillItem theme={theme}>Time Management</SkillItem>
+                <SkillItem theme={theme}>Self-Learning</SkillItem>
+                <SkillItem theme={theme}>Presentation Skills</SkillItem>
+                <SkillItem theme={theme}>Communication</SkillItem>
+              </SkillsGrid>
+            </SkillsCard>
+          </SkillsContainer>
+
       </Content>
     </AboutContainer>
   );

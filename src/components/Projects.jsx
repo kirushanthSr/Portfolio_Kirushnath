@@ -188,42 +188,72 @@ const Projects = ({ theme }) => {
   const projects = [
     {
       id: 1,
-      title: 'SKANNJ Webpage',
-      date: 'Feb 2025 – Mar 2025',
-      description: 'Designed and developed a responsive and interactive webpage for SKANNJ, focusing on user experience and accessibility. Implemented HTML, CSS, and JavaScript to create a visually appealing and functional website.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
+      title: 'SKANNJ Smart Waste Management System Website',
+      date: 'Jan 2025 – Feb 2025',
+      description: 'Developed a responsive web application promoting smart waste management awareness and showcasing SKANNJ\'s features including smart bins, automated sorting, live monitoring, and contact integration. Built as an educational platform encouraging sustainability.',
+      technologies: ['HTML5', 'CSS3', 'JavaScript'],
       category: 'web',
-      github: 'https://github.com/kirushanth1',
-      live: 'https://kirushanthsr.github.io/SKANNJ/'
+      github: 'https://github.com/kirushanthSr/SKANNJ',
+      live: 'https://kirushanthsr.github.io/SKANNJ/index.html'
     },
     {
       id: 2,
-      title: 'Real-Time Event Ticketing System',
-      date: 'Oct 2024 – Dec 2024',
-      description: 'Developed an event ticketing system using Java, JavaFX. Implementing the producer-consumer pattern for efficient ticket booking and inventory management.',
-      technologies: ['Java', 'JavaFX', 'Multithreading'],
-      category: 'desktop',
-      github: 'https://github.com/kirushanth1'
+      title: 'E-commerce Website',
+      date: 'Sep 2024 – Oct 2024',
+      description: 'Created a fully responsive e-commerce platform with dynamic catalog, product pages, cart functionality, and smooth user interface.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      category: 'web',
+      github: 'https://github.com/kirushanthSr/Ecommerce-Website.git',
+      live: 'https://kirushanthsr.github.io/Ecommerce-Website/'
     },
     {
       id: 3,
-      title: 'Student Management System',
-      date: 'June 2024 – July 2024',
-      description: 'Developed a Student Activity Management System using Java to efficiently manage student and module information, streamlining administrative processes for the university.',
-      technologies: ['Java', 'OOP'],
-      category: 'desktop',
-      github: 'https://github.com/kirushanth1'
+      title: 'Developer Portfolio Website',
+      date: 'Dec 2024 – Jan 2025',
+      description: 'Designed and launched a modern portfolio website to showcase projects, skills, and resume. Used Vite for fast build and Tailwind CSS for component styling.',
+      technologies: ['React', 'Vite', 'Tailwind CSS'],
+      category: 'web',
+      github: 'https://github.com/kirushanthSr/Portfolio_Kirushnath',
+      live: 'https://kirushanthsr.github.io/Portfolio_Kirushnath/'
     },
     {
       id: 4,
-      title: 'Personal Finance Tracker',
+      title: 'SKANNJ Smart Waste Management Dashboard',
+      date: 'Mar 2025 – Apr 2025',
+      description: 'Built a real-time dashboard for monitoring and managing smart bins, featuring live data updates, analytics, and scheduling to optimize waste collection. Integrated Socket.IO and REST APIs.',
+      technologies: ['React', 'Material-UI', 'Socket.IO', 'REST API'],
+      category: 'web',
+      github: 'https://github.com/kirushanthSr/SKANNJ-DashBoard'
+    },
+    {
+      id: 5,
+      title: 'Bookstore REST API',
+      date: 'Apr 2024 – May 2024',
+      description: 'Developed a RESTful API for managing books, customers, and orders in a bookstore system. Structured using JAX-RS, Maven, and in-memory data storage.',
+      technologies: ['Java', 'JAX-RS', 'REST API', 'Maven'],
+      category: 'api',
+      github: 'https://github.com/kirushanthSr/BookStoreAPI'
+    },
+    {
+      id: 6,
+      title: 'Flow Optimizer – Network Flow Simulation Tool',
       date: 'Feb 2024 – Mar 2024',
-      description: 'Developed a Personal Finance Tracker using Python and Tkinter. This system allows users to track income, expenses, and net worth. Data is stored and retrieved using JSON serialization.',
-      technologies: ['Python', 'Tkinter', 'JSON'],
+      description: 'Created a simulation tool for optimizing flow distribution in directed networks using advanced algorithms. Useful for logistics and transport networks.',
+      technologies: ['Java', 'OOP', 'Algorithms', 'File Parsing'],
       category: 'desktop',
-      github: 'https://github.com/kirushanth1'
+      github: 'https://github.com/kirushanthSr/Flow-Optimizer.git'
+    },
+    {
+      id: 7,
+      title: 'Ticket Management System',
+      date: 'Nov 2023 – Jan 2024',
+      description: 'Built a Java desktop application for managing support tickets between customers and vendors. Features include ticket creation, vendor assignment, and threaded communication.',
+      technologies: ['Java', 'OOP'],
+      category: 'desktop',
+      github: 'https://github.com/kirushanthSr/TicketManagementSystem.git'
     }
   ];
+
   
   const filteredProjects = filter === 'all' 
     ? projects 

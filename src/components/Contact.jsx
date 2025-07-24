@@ -355,7 +355,7 @@ const handleSubmit = (e) => {
           <motion.div variants={itemVariants}>
             <ContactType style={{ marginBottom: '0.8rem' }}>Social Profiles</ContactType>
             <SocialLinks>
-              <SocialLink href="https://github.com/kirushanth1" target="_blank" rel="noopener noreferrer" theme={theme}>
+              <SocialLink href="https://github.com/kirushanthSr" target="_blank" rel="noopener noreferrer" theme={theme}>
                 <FaGithub />
               </SocialLink>
               <SocialLink href="https://www.linkedin.com/in/kirushanthsr/" target="_blank" rel="noopener noreferrer" theme={theme}>

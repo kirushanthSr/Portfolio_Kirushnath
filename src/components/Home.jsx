@@ -487,7 +487,7 @@ const Home = ({ theme }) => {
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             {[
-              { href: "https://github.com/kirushanth1", icon: <FaGithub /> },
+              { href: "https://github.com/kirushanthSr", icon: <FaGithub /> },
               { href: "https://www.linkedin.com/in/kirushanthsr/", icon: <FaLinkedin /> },
               { href: "mailto:kirushanth0611@gmail.com", icon: <FaEnvelope /> },
               { href: "tel:+94764202229", icon: <FaPhone /> }

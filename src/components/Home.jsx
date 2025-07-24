@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaArrowDown } from 'react-icons/fa';
+import profilePic from '../assets/WhatsApp Image 2025-07-25 at 03.38.53_84b0123a.jpg';
 
 const HomeContainer = styled.section`
   min-height: 100vh;
@@ -336,54 +337,38 @@ const ImageContainer = styled(motion.div)`
 `;
 
 const ProfileImage = styled(motion.div)`
-  width: 350px;
-  height: 350px;
-  border-radius: 30px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 50%, #ff6b6b 100%);
-  background-size: 200% 200%;
+  width: 390px;
+  height: 480px;
+  border-radius: 20%;
+  background-size: 80% 80%;
+  background-position: center;
   position: relative;
   overflow: hidden;
   box-shadow: 
-    0 30px 60px rgba(0, 0, 0, 0.3),
+    0 30px 60px rgba(0, 0, 0, 0.6),
     0 0 0 1px rgba(255, 255, 255, 0.1);
-  animation: gradientRotate 6s ease-in-out infinite;
-  
-  &::before {
+
+  &::after {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, var(--primary), var(--accent), #ff6b6b, var(--primary));
-    background-size: 300% 300%;
-    border-radius: 32px;
-    z-index: -1;
-    animation: borderGlow 2s linear infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    pointer-events: none; 
+    border-radius: 20%; 
   }
+
   
-  &::after {
-    content: 'SK';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 7rem;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    letter-spacing: -0.1em;
-  }
+  
+  
   
   @keyframes gradientRotate {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
   }
-  
-  @keyframes borderGlow {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
+
   
   @media (max-width: 768px) {
     width: 250px;
@@ -493,7 +478,7 @@ const Home = ({ theme }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            I'm a Computer Science undergraduate at the Informatics Institute of Technology, affiliated with the University of Westminster, passionate about web development. I work with HTML, CSS, JavaScript, and React, and have basic experience with PHP, Laravel, SQL, and Java. I'm eager to apply my skills, take on real-world projects, and grow as a developer.
+            I'm a Computer Science undergraduate at the Informatics Institute of Technology, affiliated with the University of Westminster, passionate about web development. I work with HTML, CSS, JavaScript, React, SQL, and Java. I'm eager to apply my skills, take on real-world projects, and grow as a developer.
           </Description>
           
           <SocialLinks
@@ -536,17 +521,32 @@ const Home = ({ theme }) => {
           </CTAButton>
         </TextContent>
         
-        <ImageContainer
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          <ProfileImage 
-            whileHover={{ scale: 1.05, rotate: 5 }}
-            transition={{ duration: 0.3 }}
-            className="animate-float"
-          />
-        </ImageContainer>
+
+
+<ImageContainer
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, delay: 0.5 }}
+>
+  <ProfileImage
+    whileHover={{ scale: 1.05, rotate: 5 }}
+    transition={{ duration: 0.3 }}
+    className={profilePic ? "animate-float has-image" : "animate-float"}
+  >
+    {profilePic && (
+      <img
+        src={profilePic}
+        alt="Profile"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          borderRadius: "30px"
+        }}
+      />
+    )}
+  </ProfileImage>
+</ImageContainer>
       </Content>
       
       <ScrollIndicator

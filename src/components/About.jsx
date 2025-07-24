@@ -277,7 +277,6 @@ const About = ({ theme }) => {
                 <SkillItem theme={theme}>CSS3</SkillItem>
                 <SkillItem theme={theme}>React.js</SkillItem>
                 <SkillItem theme={theme}>Bootstrap</SkillItem>
-                <SkillItem theme={theme}>Tailwind CSS</SkillItem>
                 <SkillItem theme={theme}>REST APIs</SkillItem>
               </SkillsGrid>
 
